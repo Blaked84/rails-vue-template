@@ -9,6 +9,14 @@ export default {
     }
   },
 
+  actions: {
+    incrementLater (context) {
+      setTimeout( () => {
+        context.commit('increment')
+      }, 3000)
+    }
+  },
+
   getters: {
     sqrt (state) {
       return Math.sqrt(state.count)

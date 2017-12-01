@@ -19,10 +19,6 @@
     components: {
       'counter': Counter,
       'counter-display': CounterDisplay
-    },
-    computed: mapState(['count']),
-    methods: {
-      ...mapMutations(['increment'])
     }
   }
 </script>

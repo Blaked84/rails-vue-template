@@ -1,17 +1,27 @@
 <template>
   <div id="app">
     <p>{{ message }}</p>
+    {{ count }}
+    <button @click="increment"> +1 </button>
   </div>
 </template>
 
 <script>
-export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
+  import {mapState} from 'vuex'
+  
+  export default {
+    data: function () {
+      return {
+        message: "Hello Vue!"
+      }
+    },
+    computed: mapState(['count']),
+    methods: {
+      increment() {
+        this.$store.commit('increment')
+      }
     }
   }
-}
 </script>
 
 <style scoped>

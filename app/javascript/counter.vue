@@ -1,24 +1,19 @@
 <template>
   <div id="app">
-    <counter></counter>
-    <counter-display></counter-display>
+    <p>{{ message }}</p>
+    Counter component 1 {{ count }}
+    <button @click="increment"> +1 </button>
   </div>
 </template>
 
 <script>
   import {mapState, mapMutations} from 'vuex'
-  import Counter from 'counter.vue'
-  import CounterDisplay from 'counter-display.vue'
   
   export default {
     data: function () {
       return {
         message: "Hello Vue!"
       }
-    },
-    components: {
-      'counter': Counter,
-      'counter-display': CounterDisplay
     },
     computed: mapState(['count']),
     methods: {

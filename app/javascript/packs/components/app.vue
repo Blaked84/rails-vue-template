@@ -7,8 +7,8 @@
 
 <script>
   import {mapState, mapMutations} from 'vuex'
-  import Counter from 'counter.vue'
-  import CounterDisplay from 'counter-display.vue'
+  import Counter from './counter'
+  import CounterDisplay from './counter-display'
   
   export default {
     data: function () {

@@ -8,20 +8,12 @@
 // import Vue from 'vue';
 import Vue from 'vue/dist/vue.esm'
 import Vuex from 'vuex';
-import App from '../app.vue';
+import App from './components/app.vue';
+import Store from './store.js';
 
 Vue.use(Vuex);
 
-let store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-});
+let store = new Vuex.Store(Store);
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
